@@ -13,3 +13,13 @@ steps:
   image: node
   commands:
   - npm run build
+
+- name: scp files
+  image: appleboy/drone-scp
+  settings:
+    host: 39.105.172.113
+    username: root
+    password: qweQWE123
+    port: 22
+    target: /usr/share/nginx/html
+    source: index.html
